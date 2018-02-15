@@ -7,11 +7,12 @@ public class FibonacciMethod {
 	
 	public static int fibSolver(){
 		int fibNum = 1;
-		total = 1;
+		total = 0;
 		int count = 0;
 		ArrayList<Integer> fibSeq = new ArrayList<Integer>();
 		fibSeq.add(fibNum);
 		while(fibNum < 1000) {
+			total += fibNum;
 			if (fibSeq.size() == 1) {
 			}else {
 				int num1 = fibSeq.get(count);
@@ -20,7 +21,6 @@ public class FibonacciMethod {
 			}
 			count += 1;
 			fibSeq.add(fibNum);
-			total += fibNum;
 		}
 		return (fibNum);
 		
